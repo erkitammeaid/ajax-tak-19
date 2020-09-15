@@ -9,7 +9,7 @@
         <ul>
             <?php
                 foreach ($books as $book) {
-                    echo '<l1><a href="book.php?id=' . $book['id'];
+                    echo '<li><a href="book.php?id=' . $book['id'] </li>;
                 }
             ?>
         </ul>
