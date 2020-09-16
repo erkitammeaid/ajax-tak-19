@@ -3,10 +3,12 @@
 
 require_once 'connect.php';
 
+
 $stmt = $pdo->prepare('SELECT * FROM books');
 $stmt->execute();
 $aBooks = $stmt->fetchAll();
 
+//var_dump($books);
 ?>
 
 
@@ -20,8 +22,8 @@ $aBooks = $stmt->fetchAll();
 <body>
         <ul>
             <?php
-                foreach ($abooks as $book) {
-                    echo '<li><a href="book.php?id=' . $book['id'] . $book['title'] . '</a></li>';
+                foreach ($aBooks as $book) {
+                    echo '<li><a href="book.php?id=' . $book['id'] . '">' . $book['title'] . '</a></li>';
                 }
             ?>
         </ul>

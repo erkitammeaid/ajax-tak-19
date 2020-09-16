@@ -55,7 +55,7 @@ $book = $stmt->fetch();
                             <a href="editform.php">muuda</a>
                         </span>
                             <span>
-                                <a href="delete.php?id=' . <?php $book['id'] ?> . '">kustuta</a>
+                                <a href="delete.php?id=<?php echo $book['id']; ?>">kustuta</a>
                             </span>
                     </div>
 </body>
